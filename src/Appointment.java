@@ -12,4 +12,12 @@ public class Appointment {
         this.preferredTime = preferredTime;
         this.healthProfessional = healthProfessional;
     }
+
+    public void printDetails() {
+        System.out.println("Patient Name: " + patientName);
+        System.out.println("Phone Number: " + phoneNumber);
+        System.out.println("Preferred Time: " + preferredTime);
+        System.out.println("Health Professional Details:");
+        healthProfessional.printDetails();
+    }
 }
