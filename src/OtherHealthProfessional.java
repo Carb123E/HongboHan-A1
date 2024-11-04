@@ -7,4 +7,10 @@ public class OtherHealthProfessional extends HealthProfessional {
         super(id, name, description);
         this.type = type;
     }
+
+    @Override
+    public void printDetails() {
+        super.printDetails();
+        System.out.println("Type: " + type);
+    }
 }
