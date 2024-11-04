@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class AssignmentOne {
@@ -36,6 +37,22 @@ public class AssignmentOne {
                 appointment.printDetails();
                 System.out.println("----------------");
             }
+        }
+    }
+
+    public static void cancelBooking(List<Appointment> appointments, String phoneNumber) {
+        Iterator<Appointment> iterator = appointments.iterator();
+        boolean found = false;
+        while (iterator.hasNext()) {
+            Appointment appointment = iterator.next();
+            if (appointment.getPhoneNumber().equals(phoneNumber)) {
+                iterator.remove();
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("No appointment found with the given phone number.");
         }
     }
 }

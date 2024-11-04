@@ -20,4 +20,8 @@ public class Appointment {
         System.out.println("Health Professional Details:");
         healthProfessional.printDetails();
     }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 }
