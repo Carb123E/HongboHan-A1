@@ -27,4 +27,15 @@ public class AssignmentOne {
         Appointment appointment = new Appointment(patientName, phoneNumber, preferredTime, healthProfessional);
         appointments.add(appointment);
     }
+
+    public static void printExistingAppoints(List<Appointment> appointments) {
+        if (appointments.isEmpty()) {
+            System.out.println("No existing appointments.");
+        } else {
+            for (Appointment appointment : appointments) {
+                appointment.printDetails();
+                System.out.println("----------------");
+            }
+        }
+    }
 }
