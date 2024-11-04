@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class AssignmentOne {
+    List<Appointment> appointments = new ArrayList<>();
     public static void main(String[] args) {
         GeneralPractitioner gp1 = new GeneralPractitioner(1, "Dr. Smith", "Experienced in general practice", "Internal Medicine");
         GeneralPractitioner gp2 = new GeneralPractitioner(2, "Dr. Johnson", "Specializes in pediatrics", "Pediatrics");
@@ -17,5 +21,10 @@ public class AssignmentOne {
         System.out.println("-------------------------------------");
         ohp2.printDetails();
         System.out.println("-------------------------------------");
+    }
+
+    public static void createAppointment(List<Appointment> appointments, String patientName, String phoneNumber, String preferredTime, HealthProfessional healthProfessional) {
+        Appointment appointment = new Appointment(patientName, phoneNumber, preferredTime, healthProfessional);
+        appointments.add(appointment);
     }
 }
